@@ -1,0 +1,272 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arpan Das – Personal Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f1a;
+      --card: #12182a;
+      --accent: #ff6a3d;
+      --accent-2: #6cf2c2;
+      --text: #e6e8ef;
+      --muted: #9aa3b2;
+      --radius: 18px;
+    }* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(1200px 600px at 20% -10%, #1a2240, transparent),
+              radial-gradient(800px 500px at 80% 10%, #1b3a2f, transparent),
+              var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+header {
+  padding: 28px 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 24px;
+  font-size: 14px;
+}
+
+nav a:hover { color: var(--text); }
+
+.hero {
+  padding: 80px 6vw 120px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.05;
+  margin: 0 0 24px;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 18px;
+  max-width: 520px;
+}
+
+.cta {
+  margin-top: 36px;
+  display: flex;
+  gap: 16px;
+}
+
+.btn {
+  padding: 14px 22px;
+  border-radius: 12px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), #ff9066);
+  color: #111;
+}
+
+.btn-secondary {
+  background: rgba(255,255,255,0.06);
+  color: var(--text);
+  backdrop-filter: blur(6px);
+}
+
+.visual {
+  position: relative;
+}
+
+.node-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.node {
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+  border-radius: var(--radius);
+  padding: 20px;
+  height: 120px;
+  position: relative;
+  overflow: hidden;
+  animation: float 6s ease-in-out infinite;
+}
+
+.node:nth-child(2) { animation-delay: 1s; }
+.node:nth-child(3) { animation-delay: 2s; }
+.node:nth-child(4) { animation-delay: 1.5s; }
+
+.node::after {
+  content: "";
+  position: absolute;
+  inset: auto -40% -60% -40%;
+  height: 120%;
+  background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.18), transparent 60%);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+section.features {
+  padding: 120px 6vw;
+}
+
+.features h2 {
+  font-size: 42px;
+  margin-bottom: 60px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+  border-radius: var(--radius);
+  padding: 28px;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.card h3 { margin-top: 0; }
+.card p { color: var(--muted); }
+
+footer {
+  padding: 40px 6vw;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Arpan Das</div>
+    <nav>
+      <a href="#">Product</a>
+      <a href="#">Docs</a>
+      <a href="#">Pricing</a>
+      <a href="#">Login</a>
+    </nav>
+  </header>  <section class="hero">
+    <div>
+      <h1>Arpan Das</h1>
+      <p>Tech‑savvy creator, student, and digital explorer. Passionate about AI, automation, cybersecurity, content creation, and building a strong online presence. This is my official space on the internet.</p>
+      <div class="cta">
+        <button class="btn btn-primary">Biography</button>
+        <button class="btn btn-secondary">Connect</button>
+      </div>
+    </div><div class="visual">
+  <div class="node-grid">
+    <div class="node">AI</div>
+    <div class="node">Tech</div>
+    <div class="node">Content</div>
+    <div class="node">Cyber</div>
+    <div class="node">Web</div>
+    <div class="node">Future</div>
+  </div>
+</div>
+
+  </section>  <section class="features">
+    <h2>Who am I</h2>
+    <div class="feature-grid">
+      <div class="card">
+        <h3>Biography</h3>
+        <p>Arpan Das is a tech‑oriented student and creator from India, known for exploring modern technology, AI tools, automation systems, and digital platforms. With a strong interest in cybersecurity, web development, and online influence, he is steadily building his personal brand.</p>
+      </div>
+      <div class="card">
+        <h3>Public Presence</h3>
+        <p>Active on social media and digital platforms, sharing ideas, experiments, and content related to technology, trends, and creativity.</p>
+      </div>
+      <div class="card">
+        <h3>Tech‑Savvy Mindset</h3>
+        <p>Comfortable with new tools, fast‑learning environments, and emerging technologies. Always curious, always evolving.</p>
+      </div>
+      <div class="card">
+        <h3>Vision</h3>
+        <p>To grow as a recognized digital personality and professional, building impactful projects and a credible online identity.</p>
+      </div>
+    </div>
+  </section>  <section class="features">
+    <h2>Connect with me</h2>
+    <div class="feature-grid">
+      <div class="card">
+        <h3>Instagram</h3>
+        <p>@yourusername<br/>Reels, content & updates</p>
+      </div>
+      <div class="card">
+        <h3>YouTube</h3>
+        <p>Tech & AI focused videos</p>
+      </div>
+      <div class="card">
+        <h3>X / Twitter</h3>
+        <p>Thoughts, opinions & tech trends</p>
+      </div>
+      <div class="card">
+        <h3>Email</h3>
+        <p>official@yourdomain.com</p>
+      </div>
+    </div>
+  </section>  <section class="features">
+    <h2>What I do</h2>
+    <div class="feature-grid">
+      <div class="card">
+        <h3>Tech & AI</h3>
+        <p>Interested in AI tools, automation, and how technology shapes the future.</p>
+      </div>
+      <div class="card">
+        <h3>Content Creation</h3>
+        <p>I create digital content, experiment with ideas, and build an online presence.</p>
+      </div>
+      <div class="card">
+        <h3>Learning & Growth</h3>
+        <p>Continuously learning coding, cybersecurity, and software fundamentals.</p>
+      </div>
+      <div class="card">
+        <h3>Future Projects</h3>
+        <p>Working towards bigger projects, apps, and platforms step by step.</p>
+      </div>
+    </div>
+  </section>  <footer>
+    © 2026 Arpan Das. Personal website of Arpan Das.
+  </footer>
+</body>
+</html>
